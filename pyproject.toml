@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "raven-stars-omega"
+version = "0.1.0"
+authors = [
+    { name = "Amirabbas Alizadeh Saravi", email = "amirraven708-png@example.com" },
+]
+description = "A computational implementation of ATCA (Amir's Theory of Cognitive Architecture) and RAM-16."
+readme = "README.md"
+license = { text = "Apache License 2.0" }
+requires-python = ">=3.11"
+keywords = ["ATCA", "Cognitive-Architecture", "Semantic-Measurement", "RAM-16"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Science/Research",
+]
+
+[project.urls]
+Homepage = "https://github.com/amirraven708-png/Raven-stars-omega"
+Documentation = "https://github.com/amirraven708-png/Raven-stars-omega/docs"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | build
+  | dist
+)/
+'''
